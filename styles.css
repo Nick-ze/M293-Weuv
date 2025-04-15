@@ -1,0 +1,400 @@
+/* ===== Base & Reset Styles ===== */
+body, h1, h2, p, ul, li {
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #bfdfff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Layout Components ===== */
+header, footer {
+  background: #ffc70b;
+  color: #030006;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  margin-top: auto;
+  z-index: 100;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* ===== Navigation ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: #313ea7;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #f8f9fa;
+  font-weight: bold;
+}
+
+/* ===== Typography ===== */
+h2 {
+  color: #025aa5;
+  border-bottom: 2px solid #0275d8;
+  padding-bottom: 5px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* ===== Card Components ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card, .infoBox {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover, .infoBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.card h2 {
+  color: #1a3d7c;
+  font-size: 1.4rem;
+}
+
+.card p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.card-description {
+  margin-top: 1rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Images ===== */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto 0;
+}
+
+.card img {
+  max-width: 200px;
+}
+
+/* ===== Contact Page Styles ===== */
+.contact-container {
+  max-width: 1200px;
+  margin: 2rem auto 100px;
+  padding: 0 20px;
+}
+
+.contact-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #313ea7 0%, #025aa5 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  border-bottom: none;
+}
+
+.volleyball-icon {
+  font-size: 5rem;
+  color: #ffc70b;
+  animation: bounce 2s infinite;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.section-title {
+  color: #313ea7;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #ffc70b;
+  display: inline-block;
+}
+
+/* ===== Info Boxes ===== */
+.infoBox {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #ffc70b;
+}
+
+.info-icon {
+  background: #f0f7ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  color: #313ea7;
+  font-size: 1.2rem;
+}
+
+.info-content h3 {
+  color: #313ea7;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* ===== Form Styles ===== */
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+}
+
+.submit-btn {
+  background: #313ea7;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background: #025aa5;
+  transform: translateY(-2px);
+}
+
+/* ===== Animations ===== */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ===== Authors Section ===== */
+.authors-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.author-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.author-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid #ffc70b;
+}
+
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info h3 {
+  color: #313ea7;
+  margin-bottom: 0.3rem;
+}
+
+.author-role {
+  color: #025aa5;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.author-bio {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===== Contact Form Section ===== */
+.contact-form-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #313ea7;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: #313ea7;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: #313ea7;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  justify-self: start;
+}
+
+.submit-btn:hover {
+  background: #025aa5;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .author-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .author-image {
+    margin-bottom: 1rem;
+  }
+}
